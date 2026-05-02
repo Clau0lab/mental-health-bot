@@ -1,7 +1,7 @@
 import streamlit as st
 from huggingface_hub import InferenceClient
 # 1. SETUP - Replace
-HF_TOKEN = "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"
+HF_TOKEN = st.secrets["HF_TOKEN"]
 client = InferenceClient("meta-llama/Meta-Llama-3-8B-Instruct", token=HF_TOKEN)
 st.title("Iris: My Mental Health ChatBot") 
 st.write("Hello! I am Iris and I am here to listen.")
